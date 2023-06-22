@@ -1,26 +1,22 @@
 import './style.css';
-import Header from "./header";
+import Header from "./Header";
 import PostCard from "./PostCard";
+import Navbar from "./Navbar";
 import data from "./PostData";
-console.log(data);
 
 function App() {
     const posts = data.map(post => {
         return (
           <PostCard
-            cover = {post.img}
-            restaurant = {post.restaurant}
-            stars = {post.stars}
-            price = {post.price}
-            one_word = {post.one_word}
-            address = {post.address}
-            thoughts = {post.thoughts}
+            key = {post.id}
+            {...post}
           />
         )
 
     })
   return (
     <div className="App">
+      <Navbar />
       <Header />
       <section className="card--list">
         {posts}
