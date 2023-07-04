@@ -1,0 +1,99 @@
+body {
+    background-color: white;
+    color: black;
+}
+/* Navbar CSS */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .left-links,
+  .right-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .left-links li,
+  .right-links li {
+    margin-right: 10px;
+  }
+  
+  .left-links a,
+  .right-links a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .left-links a:hover {
+    background-color: #333;
+    color: #ffffff;
+  }
+  
+  .right-links img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+  }
+  /* End of Navbar CSS */
+
+
+/* Header CSS */
+.header {
+    display: flex;
+    flex-direction: row;
+    gap: 20px
+}
+
+/* End of Header CSS */
+
+
+/* Cards CSS */
+.card--list {
+    display: flex;
+    flex-direction: "row";
+    overflow-x: auto;
+    gap: 20px;
+}
+.card {
+    border-radius: 10px;
+    width: 300px;
+    font-size: large;
+}
+
+.card:hover {
+    background-color: #f5f5f5;
+    transform: scale(1.15);
+}
+.card--image {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.card--stars {
+    align-self: center;
+    margin-bottom: 10px;
+}
+.card--stats {
+    align-self: center;
+}
+.card--stats span{
+    margin-right: 10px;
+}
+.card--address {
+    font-style: italic;
+}
+/* End of Cards CSS */
+
+/* Test CSS */
+.random {
+    display: flex;
+    flex-direction: "column";
+    overflow-x: auto;
+}
