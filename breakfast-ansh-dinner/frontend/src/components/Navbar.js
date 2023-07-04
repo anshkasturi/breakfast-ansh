@@ -1,4 +1,3 @@
-
 export default function Navbar() {
     return (
         <nav>
@@ -15,10 +14,10 @@ export default function Navbar() {
             </ul>
             <ul className="right-links">
                 <li>
-                    <a href="https://www.instagram.com"><img src="./images/instagram-logo.png" alt="Instagram" /></a>
+                    <a href="https://www.instagram.com"><img src="../images/instagram-logo.png" alt="Instagram" /></a>
                 </li>
                 <li>
-                    <a href="https://www.github.com/anshkasturi"><img src="./images/github-logo.png" alt="GitHub" /></a>
+                    <a href="https://www.github.com/anshkasturi"><img src="../images/github-logo.png" alt="GitHub" /></a>
                 </li>
             </ul>
         </nav>

@@ -13,5 +13,10 @@ export const getPosts = (req, res) => {
 };
 
 export const getPost = (req, res) => {
-    res.json("From Controller")
-}
+    const q = "SELECT * FROM test_table WHERE id=?" 
+    db.query(q, [req.params.id], (err, data) => {
+        if (err) return res.status(500).json(err);
+
+        return res.status(200).json(data[0]);
+    });
+};
