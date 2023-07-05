@@ -12,7 +12,7 @@ export default function Content() {
   useEffect(() => {
   const fetchAllPosts = async () => {
       try {
-          const res = await axios.get(`/posts`);
+          const res = await axios.get(`/posts/all`);
           console.log(res)
           setPosts(res.data)
       } catch (err) {
@@ -20,7 +20,7 @@ export default function Content() {
       }
   };
   fetchAllPosts();
-  }, []);
+  }, [location_category]);
   const testposts = posts.map(post => {
       return (
         <PostCard

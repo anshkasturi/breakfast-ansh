@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: gainsboro; /* gainsboro */
     color: black;
 }
 /* Navbar CSS */
@@ -64,6 +64,7 @@ nav {
     border-radius: 10px;
     width: 300px;
     font-size: large;
+    background-color: white;
 }
 
 a {
@@ -145,3 +146,27 @@ a {
   font-style: italic;
 }
 /* End of Full Post CSS */
+
+/* About Page  */
+.about--header {
+  margin-left: 15px;
+}
+.about--img {
+  float: left;
+  margin: 15px;
+  width: 400px;
+  height:auto;
+}
+/* End of About Page */
+
+.contactpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.cp--message-box {
+  width: 400px;
+  height: 100px;
+}

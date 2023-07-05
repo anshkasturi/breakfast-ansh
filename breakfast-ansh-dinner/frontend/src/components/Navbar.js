@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 export default function Navbar() {
     return (
         <nav>
@@ -14,10 +16,10 @@ export default function Navbar() {
             </ul>
             <ul className="right-links">
                 <li>
-                    <a href="https://www.instagram.com"><img src="../images/instagram-logo.png" alt="Instagram" /></a>
+                    <Link to="https://www.instagram.com"><img src="../images/instagram-logo.png" alt="Instagram" /></Link>
                 </li>
                 <li>
-                    <a href="https://www.github.com/anshkasturi"><img src="../images/github-logo.png" alt="GitHub" /></a>
+                    <Link to="https://www.github.com/anshkasturi"><img src="../images/github-logo.png" alt="GitHub" /></Link>
                 </li>
             </ul>
         </nav>
