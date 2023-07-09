@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Content from "./components/Content";
 import FullPost from "./components/FullPost";
 import Header from "./components/Header";
+import Author from "./components/Authors";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/authors",
+        element: <Author />,
       }
     ],
   },

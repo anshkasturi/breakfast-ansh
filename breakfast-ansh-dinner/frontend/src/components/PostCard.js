@@ -6,15 +6,15 @@ export default function Post_Card({id, img_link, restaurant_name, stars, price, 
     return(
         <div className="card">
             <Link className="link" to={`/post/${id}`}>
-            <img src={"../images/test_photo.png"} alt="Here is the food" className="card--image"/>
+            <img src={"https://storage.googleapis.com/breakfast-ansh-and-dinner/test_photo.png"} alt="Here is the food" className="card--image"/>
             <h1 className="card--title"> {restaurant_name} </h1>
-            <img src="./images/star.png" alt="stars" className="card--stars" />
+            <img src="https://storage.googleapis.com/breakfast-ansh-and-dinner/star.png" alt="stars" className="card--stars" />
             <div className="card--stats">
                 <span>{dollarSigns}</span>
                 <span>{oneword}</span>
             </div>
+            <p>{author}</p><br />
             <p className="card--address">{address}</p>
-            <p>{author}</p>
             </Link>
         </div>
     )

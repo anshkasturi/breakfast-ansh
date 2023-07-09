@@ -1,9 +1,8 @@
-
 export default function Header() {
     return(
         <div className="header">
             <div className="header--logo">
-                <img src = "./images/bad_logo.png" alt="BAD Logo"></img>
+                <img src = "https://storage.googleapis.com/breakfast-ansh-and-dinner/bad_logo.png" alt="BAD Logo"></img>
             </div>
             <div className="header--info">
                 {/* Sido sayss match welcome to a in BAD logo*/}

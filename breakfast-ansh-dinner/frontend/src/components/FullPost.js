@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react';
 import {useLocation, Link} from 'react-router-dom';
 import moment from "moment";
 import axios from "axios"; 
+import { HashLink } from 'react-router-hash-link';
 
 export default function FullPost() {
 
@@ -26,11 +27,13 @@ export default function FullPost() {
 
     return(
         <div className="full-post">
-            <img src = "../images/test_photo.png" className="fp--image" />
+            <img src = "https://storage.googleapis.com/breakfast-ansh-and-dinner/test_photo.png" className="fp--image" />
             <div className="fp--title">{post.restaurant_name}</div>
             <div className="fp--author-info">
-                <img src="../images/blank-profile.png" className="fp--author-img" x/>
+                <HashLink smooth className="link" to={`/authors#${post.author}`}> 
+                <img src="https://storage.googleapis.com/breakfast-ansh-and-dinner/blank-profile.png" className="fp--author-img" x/>
                 <div className="fp--author">{post.author}</div>
+                </HashLink>
             </div>
             <div className="fp--stars">Stars: {post.stars}</div>
             <div className="fp--price">Price: {"$".repeat(post.price)}</div>

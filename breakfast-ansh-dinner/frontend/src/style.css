@@ -4,43 +4,82 @@ body {
 }
 /* Navbar CSS */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .left-links,
-  .right-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-  }
-  
-  .left-links li,
-  .right-links li {
-    margin-right: 10px;
-  }
-  
-  .left-links a,
-  .right-links a {
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .left-links a:hover {
-    background-color: #333;
-    color: #ffffff;
-  }
-  
-  .right-links img {
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-  }
-  /* End of Navbar CSS */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.left-links,
+.right-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.left-links li,
+.right-links li {
+  margin-right: 10px;
+}
+
+.left-links a,
+.right-links a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.left-links a:hover {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.right-links img {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 3px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.menu-links {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+}
+/* End of Navbar CSS */
 
 
 /* Header CSS */
@@ -101,15 +140,6 @@ a {
 }
 /* End of Cards CSS */
 
-/* Test CSS */
-.random {
-    display: flex;
-    flex-direction: "column";
-    overflow-x: auto;
-}
-/* End of Random CSS */
-
-
 /* Full Post CSS */
 .full-post {
   margin-left: 70px;
@@ -159,6 +189,7 @@ a {
 }
 /* End of About Page */
 
+/* Contact Page */
 .contactpage {
   display: flex;
   flex-direction: column;
@@ -170,3 +201,191 @@ a {
   width: 400px;
   height: 100px;
 }
+/* End of contact page */
+
+/* Authors Page */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.author:nth-child(2n) .photo {
+  order: 2;
+  margin-right: 20px;
+}
+
+.author .photo img {
+  width: 300px;
+  height: 300px;
+}
+
+.author .info {
+  text-align: left;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.author--name {
+  margin-bottom: 10px;
+}
+
+
+.author p {
+  margin-bottom: 10px;
+}
+
+.author img {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+/* End of Authors Page */
+
+
+/* Mobile CSS */
+@media (max-width: 768px) {
+  /* Navbar Mobile CSS */
+  .left-links,
+  .right-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    position: fixed;
+
+  }
+
+  .hamburger.open {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: purple;
+  }
+
+  .hamburger .bar {
+    background-color: black;
+  }
+
+  .menu-links {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  .menu-links img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+  }
+  /* End of Mobile Navbar CSS */
+  /* Mobile Header CSS */
+  
+  .header {
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  /* End of Header Mobile */
+  /* About Mobile */
+  .about--img {
+    float: none;
+    margin: 15px;
+  }
+  /* End of About Mobile */
+  .card {
+    width: 300px;
+    border-radius: 0px;
+    font-size: large;
+    background-color: white;
+  }
+  .card--image {
+    border-top-left-radius: 100px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 1000px;
+  }
+
+  /* Authors Mobile */
+  .container {
+    all: unset;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .authors {
+    all: unset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .author {
+    all: unset;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+  }
+
+  .photo img {
+    all: unset;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .info {
+    all: unset;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+  }
+
+  h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    all: unset;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  a img {
+    all: unset;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* End of Authors Mobile */
+
+}
+/* End of mobile CSS */
